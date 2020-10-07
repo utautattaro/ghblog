@@ -1,15 +1,16 @@
 <template>
     <b-container>
         <a href="https://utautattaro.github.io/ghblog/">< back to top</a>
-        <b-card v-bind:title="title" v-bind:sub-title="new Date(created_at).toLocaleString()" class="my-4">
-            <div class="txt" v-html="$md.render(body)">
+        <b-container>
+            <div class="text-center m-0 p-0">
+                <b-avatar v-bind:href="user.html_url" target="_blank" v-bind:src="user.avatar_url" size="4rem"></b-avatar>
+                <p>{{user.login}}</p>
             </div>
-
-            <span style="position: absolute;top:5px;right:5px;">
-              {{user.login}}
-              <b-avatar v-bind:href="user.html_url" target="_blank" v-bind:src="user.avatar_url"></b-avatar>
-            </span>
-          </b-card>
+            <b-card v-bind:title="title" v-bind:sub-title="new Date(created_at).toLocaleString()" class="my-4">
+                <div class="txt" v-html="$md.render(body)">
+                </div>
+            </b-card>
+        </b-container>
     </b-container>
 </template> 
 
