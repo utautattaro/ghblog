@@ -2,8 +2,7 @@
     <b-container>
         <b-link to="/ghblog/">< back to top</b-link>
         <b-card v-bind:title="title" v-bind:sub-title="new Date(created_at).toLocaleString()" class="my-4">
-            <b-card-text>
-              {{body}}
+            <b-card-text class="txt" v-html="$md.render(body)">
             </b-card-text>
             <span style="position: absolute;top:5px;right:5px;">
               {{user.login}}
@@ -37,3 +36,9 @@
         }
     }
 </script>
+
+<style>
+    .txt {
+  white-space: pre-wrap;
+}
+</style>

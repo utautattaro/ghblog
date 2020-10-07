@@ -37,6 +37,7 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/markdownit'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -44,6 +45,14 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    filenames: {
+      app: () => '[name].js',
+      chunk: () => '[name].js',
+      css: () => '[name].js',
+      img: () => '[path][name].[ext]',
+      font: () => '[path][name].[ext]',
+      video: () => '[path][name].[ext]'
+    }
   },
 
   generate: {
