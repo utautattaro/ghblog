@@ -1,10 +1,10 @@
 <template>
     <b-container>
-        <b-link to="/ghblog/">< back to top</b-link>
+        <a href="https://utautattaro.github.io/ghblog/">< back to top</a>
         <b-card v-bind:title="title" v-bind:sub-title="new Date(created_at).toLocaleString()" class="my-4">
-            <b-card-text class="txt">
-              {{body}}
-            </b-card-text>
+            <div class="txt" v-html="$md.render(body)">
+            </div>
+
             <span style="position: absolute;top:5px;right:5px;">
               {{user.login}}
               <b-avatar v-bind:href="user.html_url" target="_blank" v-bind:src="user.avatar_url"></b-avatar>
@@ -18,9 +18,9 @@
         data () {
             return {
                 // APIで取得してきたデータ群
-                title: 'test',    // タイトル
-                body: 'hogehoghoeghoegoe',  // コンテンツ
-                created_at : 'ghoegoehge', // 作成日時
+                title: '',    // タイトル
+                body: '',  // コンテンツ
+                created_at : '', // 作成日時
                 user : '' //ユーザー情報
             }
         },

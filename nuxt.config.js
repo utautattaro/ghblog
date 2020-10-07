@@ -36,9 +36,13 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/markdownit'
   ],
-
+  
+  markdownit: {
+    injected: true
+  },
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
