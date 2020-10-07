@@ -1,6 +1,9 @@
 <template>
   <b-container>
-    <h1 class="bg-dark text-light text-center p-3">ghblog</h1>
+    <div class="bg-dark text-light text-center p-3">
+      <h1>ghblog</h1>
+      <a href="https://github.com/utautattaro/ghblog/issues">issueを立てると記事ができます</a>
+    </div>
     <b-card v-bind:title="post.title" v-bind:sub-title="new Date(post.created_at).toLocaleString()" class="my-4" v-for="(post, index) in posts" :key="index">
       <b-card-text>
         {{post.body.substr(0, 50)}}{{(post.body.length > 50)?"..." : ""}}
