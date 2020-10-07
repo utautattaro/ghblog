@@ -22,7 +22,7 @@
             if (payload) {
                 return {
                     title: payload.title,
-                    content: payload.content,
+                    body: payload.body,
                     created_at: payload.created_at,
                     user : payload.user
                 }
