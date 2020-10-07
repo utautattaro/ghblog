@@ -9,7 +9,7 @@
         {{post.user.login}}
         <b-avatar v-bind:href="post.user.html_url" target="_blank" v-bind:src="post.user.avatar_url"></b-avatar>
       </span>
-      <b-link v-bind:to="'post/'+post.id" class="card-link">read more</b-link>
+      <b-link v-bind:to="'/ghblog/post/'+post.id" class="card-link">read more</b-link>
     </b-card>
   </b-container>
 </template>

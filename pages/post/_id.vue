@@ -1,6 +1,6 @@
 <template>
     <b-container>
-        <b-link to="/">< back to top</b-link>
+        <b-link to="/ghblog/">< back to top</b-link>
         <b-card v-bind:title="title" v-bind:sub-title="new Date(created_at).toLocaleString()" class="my-4">
             <b-card-text>
               {{body}}
