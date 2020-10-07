@@ -41,6 +41,8 @@
   * 
  */
 
+/*! https://mths.be/punycode v1.4.1 by @mathias */
+
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
  * @version 1.16.1
