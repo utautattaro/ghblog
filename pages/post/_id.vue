@@ -42,4 +42,8 @@
     .txt {
   white-space: pre-wrap;
 }
+
+img {
+    width : 100%
+}
 </style>

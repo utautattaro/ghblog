@@ -8,7 +8,7 @@
       <b-card-text>
         {{post.body.substr(0, 50)}}{{(post.body.length > 50)?"..." : ""}}
       </b-card-text>
-      <span style="position: absolute;top:5px;right:5px;">
+      <span style="position: absolute;bottom:5px;right:5px;">
         {{post.user.login}}
         <b-avatar v-bind:href="post.user.html_url" target="_blank" v-bind:src="post.user.avatar_url"></b-avatar>
       </span>
