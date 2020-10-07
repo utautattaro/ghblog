@@ -1,73 +1,33 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        ghblog
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+  <b-container>
+    <h1 class="bg-dark text-light text-center p-3">ghblog</h1>
+    <b-card v-bind:title="post.title" v-bind:sub-title="new Date(post.created_at).toLocaleString()" class="my-4" v-for="(post, index) in posts" :key="index">
+      <b-card-text>
+        {{post.body.substr(0, 50)}}{{(post.body.length > 50)?"..." : ""}}
+      </b-card-text>
+      <span style="position: absolute;top:5px;right:5px;">
+        {{post.user.login}}
+        <b-avatar v-bind:href="post.user.html_url" target="_blank" v-bind:src="post.user.avatar_url"></b-avatar>
+      </span>
+      <b-link v-bind:to="'post/'+post.id" class="card-link">read more</b-link>
+    </b-card>
+  </b-container>
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData({ $axios }) {
+			// 取得先のURL
+			const url = "https://api.github.com/repos/utautattaro/ghblog/issues";
+			// リクエスト（Get）
+			const response = await $axios.$get(url);
+			// 配列で返ってくるのでJSONにして返却
+			return {
+				posts: response
+			};
+		}
+}
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>

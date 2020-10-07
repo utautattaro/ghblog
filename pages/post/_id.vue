@@ -1,9 +1,16 @@
 <template>
-    <div>
-        <p>title : {{title}}</p>
-        <p>content : {{body}}</p>
-        <small>author : {{user.login}} createdAt : {{created_at}}</small>
-    </div>
+    <b-container>
+        <b-link to="/">< back to top</b-link>
+        <b-card v-bind:title="title" v-bind:sub-title="new Date(created_at).toLocaleString()" class="my-4">
+            <b-card-text>
+              {{body}}
+            </b-card-text>
+            <span style="position: absolute;top:5px;right:5px;">
+              {{user.login}}
+              <b-avatar v-bind:href="user.html_url" target="_blank" v-bind:src="user.avatar_url"></b-avatar>
+            </span>
+          </b-card>
+    </b-container>
 </template> 
 
 <script>
@@ -11,9 +18,9 @@
         data () {
             return {
                 // APIで取得してきたデータ群
-                title: '',    // タイトル
-                body: '',  // コンテンツ
-                created_at : '', // 作成日時
+                title: 'test',    // タイトル
+                body: 'hogehoghoeghoegoe',  // コンテンツ
+                created_at : 'ghoegoehge', // 作成日時
                 user : '' //ユーザー情報
             }
         },
