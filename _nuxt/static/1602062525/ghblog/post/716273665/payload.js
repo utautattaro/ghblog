@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/ghblog/post/716273665", {data:[],fetch:[],mutations:void 0});
