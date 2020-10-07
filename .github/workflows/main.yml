@@ -8,7 +8,7 @@ on:
   push:
     branches: [ master ]
   issues:
-    types: [opened, edited]
+    types: [opened, edited,deleted,closed]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
