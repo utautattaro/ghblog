@@ -12,7 +12,7 @@
         {{post.user.login}}
         <b-avatar v-bind:href="post.user.html_url" target="_blank" v-bind:src="post.user.avatar_url"></b-avatar>
       </span>
-      <a v-bind:href="'/post/'+post.id + '/'" class="card-link">read more</a>
+      <a v-bind:href="'./post/'+post.id + '/'" class="card-link">read more</a>
     </b-card>
   </b-container>
 </template>
