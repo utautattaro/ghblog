@@ -48,6 +48,14 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    filenames: {
+      app: () => '[name].js',
+      chunk: () => '[name].js',
+      css: () => '[name].js',
+      img: () => '[path][name].[ext]',
+      font: () => '[path][name].[ext]',
+      video: () => '[path][name].[ext]'
+    }
   },
 
   generate: {
