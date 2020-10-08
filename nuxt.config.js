@@ -52,7 +52,7 @@ export default {
 
   generate: {
     routes() {
-      return axios.get('https://api.github.com/repos/utautattaro/ghblog/issues').then(res => {
+      return axios.get('https://api.github.com/repos/utautattaro/ghblog/issues?client_id=d2270c16840601882549&client_secret=90d1f65568f007af3c8b398b39ad1379d3a45d30').then(res => {
         return res.data.map(post => {
           return {
             route: '/post/' + post.id,

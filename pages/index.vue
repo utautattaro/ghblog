@@ -21,7 +21,7 @@
 export default {
   async asyncData({ $axios }) {
 			// 取得先のURL
-			const url = "https://api.github.com/repos/utautattaro/ghblog/issues";
+			const url = "https://api.github.com/repos/utautattaro/ghblog/issues?client_id=d2270c16840601882549&client_secret=90d1f65568f007af3c8b398b39ad1379d3a45d30";
 			// リクエスト（Get）
 			const response = await $axios.$get(url);
 			// 配列で返ってくるのでJSONにして返却
