@@ -1,20 +1,11 @@
 # ghblog
 
-## Build Setup
+Github Issue + Github Action + Github Pages with Nuxt.js
 
-```bash
-# install dependencies
-$ npm install
+Issuneの内容をGithub Pagesにブログっぽく表示するプロジェクトです
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+実行例
+https://utautattaro.github.io/ghblog/
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+ソース
+https://github.com/utautattaro/ghblog/issues
