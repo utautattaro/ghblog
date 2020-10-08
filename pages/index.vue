@@ -21,7 +21,7 @@
 export default {
   async asyncData({ $axios }) {
 			// 取得先のURL
-			const url = "https://api.github.com/repos/utautattaro/ghblog/issues";
+			const url = "https://api.github.com/repos/NIFCLOUD-mbaas/UserCommunity/issues";
 			// リクエスト（Get）
 			const response = await $axios.$get(url);
 			// 配列で返ってくるのでJSONにして返却
