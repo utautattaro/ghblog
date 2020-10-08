@@ -13,10 +13,10 @@
             <b-container class="p-0">
                 <div v-for="comment in comments">
                     <b-row class="my-2">
-                        <b-col cols="1" class="text-center p-0">
-                            <b-avatar v-bind:href="comment.user.html_url" target="_blank" v-bind:src="comment.user.avatar_url" size="2rem"></b-avatar>
+                        <b-col sm="1" class="text-center p-0 m-1">
+                            <b-avatar v-bind:href="comment.user.html_url" target="_blank" v-bind:src="comment.user.avatar_url"></b-avatar>
                         </b-col>
-                        <b-col cols="11">
+                        <b-col sm="11">
                             <b-card>
                                 <div class="txt" v-html="$md.render(comment.body)">
                                 </div>
