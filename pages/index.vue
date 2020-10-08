@@ -29,7 +29,7 @@ export default {
 				posts: response
 			};
 		}
-}668356381
+}
 </script>
 
 <style>
