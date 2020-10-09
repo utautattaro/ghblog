@@ -4,15 +4,14 @@
         <b-container>
             <div class="text-center m-0 p-0">
                 <b-avatar v-bind:href="user.html_url" target="_blank" v-bind:src="user.avatar_url" size="4rem"></b-avatar>
-                <p>{{user.login}}</p>
+                <p class="m-0">{{user.login}}</p>
             </div>
             <b-card v-bind:title="title" v-bind:sub-title="new Date(created_at).toLocaleString()" class="my-2">
                 <div class="txt" v-html="$md.render(body)">
                 </div>
             </b-card>
             <b-container class="p-0">
-                <p>comments</p>
-                <b-card v-for="comment in comments">
+                <b-card v-for="comment in comments" class="my-4">
                     <div class="txt" v-html="$md.render(comment.body)">
                     </div>
                     <span style="position: absolute;bottom:5px;right:5px;">
