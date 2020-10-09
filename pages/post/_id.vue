@@ -6,24 +6,20 @@
                 <b-avatar v-bind:href="user.html_url" target="_blank" v-bind:src="user.avatar_url" size="4rem"></b-avatar>
                 <p>{{user.login}}</p>
             </div>
-            <b-card v-bind:title="title" v-bind:sub-title="new Date(created_at).toLocaleString()" class="my-4">
+            <b-card v-bind:title="title" v-bind:sub-title="new Date(created_at).toLocaleString()" class="my-2">
                 <div class="txt" v-html="$md.render(body)">
                 </div>
             </b-card>
             <b-container class="p-0">
-                <div v-for="comment in comments">
-                    <b-row class="my-2">
-                        <b-col sm="1" class="text-right p-0">
-                            <b-avatar v-bind:href="comment.user.html_url" target="_blank" v-bind:src="comment.user.avatar_url"></b-avatar>
-                        </b-col>
-                        <b-col sm="11">
-                            <b-card>
-                                <div class="txt" v-html="$md.render(comment.body)">
-                                </div>
-                            </b-card>
-                        </b-col>
-                    </b-row>
-                </div>
+                <p>comments</p>
+                <b-card v-for="comment in comments">
+                    <div class="txt" v-html="$md.render(comment.body)">
+                    </div>
+                    <span style="position: absolute;bottom:5px;right:5px;">
+                      {{comment.user.login}}
+                      <b-avatar v-bind:href="comment.user.html_url" target="_blank" v-bind:src="comment.user.avatar_url"></b-avatar>
+                    </span>
+                </b-card>
             </b-container>
         </b-container>
     </b-container>
