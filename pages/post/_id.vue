@@ -15,7 +15,8 @@
                     <div class="txt" v-html="$md.render(comment.body)">
                     </div>
                     <span style="position: absolute;bottom:5px;right:5px;">
-                      {{comment.user.login}}
+                        <span class="text-muted">{{new Date(comment.created_at).toLocaleString()}}</span>
+                        <span class="text-dark">{{comment.user.login}}</span>
                       <b-avatar v-bind:href="comment.user.html_url" target="_blank" v-bind:src="comment.user.avatar_url"></b-avatar>
                     </span>
                 </b-card>
