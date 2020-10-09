@@ -1,11 +1,9 @@
 # ghblog
 
-Github Issue + Github Action + Github Pages with Nuxt.js
+**JAMStack Blog System using Github Issue + Github Actions + Github Pages with Nuxt.js!**
 
-Issuneの内容をGithub Pagesにブログっぽく表示するプロジェクトです
-
-実行例
+example:
 https://utautattaro.github.io/ghblog/
 
-ソース
+source:
 https://github.com/utautattaro/ghblog/issues

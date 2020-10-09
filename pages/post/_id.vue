@@ -1,6 +1,5 @@
 <template>
     <b-container>
-        <a href="https://utautattaro.github.io/ghblog/">< back to top</a>
         <b-container>
             <div class="text-center m-0 p-0">
                 <b-avatar v-bind:href="user.html_url" target="_blank" v-bind:src="user.avatar_url" size="4rem"></b-avatar>
