@@ -69,5 +69,10 @@ export default {
         })
       })
     }
-  }
+  },
+  markdownit: {
+    use: [
+      'markdown-it-highlightjs',
+    ]
+  },
 }
